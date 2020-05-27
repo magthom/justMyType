@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    $('#keyboard-lower-container').hide();
+    $('#keyboard-upper-container').hide();
 });
