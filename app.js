@@ -9,11 +9,6 @@ $(document).ready(function () {
 
     $("#sentence").append(sentences[0]);
 
-   
-    
-   
-
-
     $(document).keydown(function (e) {
         if (e.keyCode === 16) {
             $("#keyboard-upper-container").show();
@@ -25,8 +20,17 @@ $(document).ready(function () {
             $("#keyboard-upper-container").hide();
             $("#keyboard-lower-container").show();
         }
-        //$(".highlight").removeClass("highlight")
     });
+
+    $(document).keypress(function (e){
+        let $key = $("#" + e.which);
+        $($key).css("background-color", "yellow");
+
+        $(document).keyup(function (e){
+            $($key).css("background-color", "initial");
+        });
+    });
+
    
 
 });
